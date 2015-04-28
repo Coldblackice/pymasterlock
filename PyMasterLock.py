@@ -1,3 +1,4 @@
+
 import argparse
 import itertools
 
@@ -23,9 +24,6 @@ def combo(x):
 		if (((10 * i) + l2) % 4) == mod:
 			third.append(float((10 * i) +l2))
 
-	for i in third:
-		print "[*] Third Digit is : %i\r\n" % i
-
 	for i in xrange(10):
 		temp = ((mod + 2) % 4) + (4 * i)
 		if ( not x or ( (third[x-1] +2) %40 != temp and (third[x-1] -2) %40) ):
@@ -34,8 +32,5 @@ def combo(x):
 	print "[*] First Digit is :" + str(first)
 	print "[*] Second digits could be: " + ', '.join(itertools.imap(str, second))
 	print "[*] third digits could be: " + ', '.join(itertools.imap(str, third))
-	for i in third:
-		print "[*] Third Digit is : %i\r" % i
-
 
 combo(0)
