@@ -32,8 +32,8 @@ def combo(x):
 			second.append(float(temp))
 
 	print "[*] First Digit is :" + str(first)
-	print "[*] Second digits could be: + ', '.join(itertools.imap(str, second))
-	print "[*] third digits could be: + ', '.join(itertools.imap(str, third))
+	print "[*] Second digits could be: " + ', '.join(itertools.imap(str, second))
+	print "[*] third digits could be: " + ', '.join(itertools.imap(str, third))
 	for i in third:
 		print "[*] Third Digit is : %i\r" % i
 
