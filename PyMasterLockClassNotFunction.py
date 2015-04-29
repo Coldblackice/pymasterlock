@@ -9,18 +9,15 @@ import sys
 # parser.add_argument("--third", help="""Find the "Resistant Location"Apply half as much pressure to the shackle so that you can turn the dial.Rotate dial to the right until you feel resistance. Rotate the dial to the right several more times to ensure you're feeling resistance at the same exact location.Enter this number into Resistant Location. If the resistance begins at a half number, such as 14.5, enter 14.5.""", type=float)
 # args = parser.parse_args()
 
-if not sys.argv[1] or sys.argv[2] or sys.argv[3]:
-	print "error please supply all three numbers"
-
 class MasterLock():
 	def __init__(self):
 		self.x = 0
 		self.second = []
 		self.third = []
 
-		self.l1 = int(sys.argv[1])
-		self.l2 = int(sys.argv[2])
-		self.r1 = int(sys.argv[3])
+		self.l1 = float(sys.argv[1])
+		self.l2 = float(sys.argv[2])
+		self.r1 = float(sys.argv[3])
 
 		self.first = (self.r1 + 5) % 40
 		self.mod = self.first % 4
