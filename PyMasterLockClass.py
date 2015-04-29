@@ -14,6 +14,7 @@ class MasterLock():
 		self.x = 0
 		self.second = []
 		self.third = []
+		
 		self.l1 = float(sys.argv[1])
 		self.l2 = float(sys.argv[2])
 		self.r1 = float(sys.argv[3])
@@ -43,8 +44,8 @@ class MasterLock():
 		Locked Position in the calculator below."""
 		for i in xrange(10):
 			temp = ((self.mod + 2) % 4) + (4 * i)
-			if ( not self.x or ( (third[self.x-1] +2) %40 != temp and (third[self.x-1] -2) %40) ):
-				self.second.append(float(temp))
+			if ( not self.x or ( (third[self.x-1] +2) %40 != temp and (third[self.x-1] -2) %40) ): self.second.append(float(temp))
+				
 		return ', '.join(itertools.imap(str, self.second))
 
 	def get_third(self):
@@ -59,10 +60,9 @@ class MasterLock():
 		into Resistant Location. If the resistance 
 		begins at a half number, such as 14.5, enter 14.5."""
 		for i in xrange(4):
-			if (((10 * i) + self.l1) % 4) == self.mod:
-				self.third.append(float((10 * i) + self.l1))
-			if (((10 * i) + self.l2) % 4) == self.mod:
-				self.third.append(float((10 * i) + self.l2))
+			if (((10 * i) + self.l1) % 4) == self.mod: self.third.append(float((10 * i) + self.l1))
+			if (((10 * i) + self.l2) % 4) == self.mod: self.third.append(float((10 * i) + self.l2))
+				
 		return ', '.join(itertools.imap(str, self.third))
 
 	if len(sys.argv) != 4:
@@ -71,4 +71,4 @@ class MasterLock():
 ml = MasterLock()
 print "[+] First Number : " + str(ml.get_first())
 print "[+] possible Second number : " + str(ml.get_second())
-print "[+] Two Possible Third numbers : " + str(ml.get_third()) +" ( increased accuracy coming in future)"
+print "[+] Two Possible Third numbers : " + str(ml.get_third()) + " ( increased accuracy coming in future)"
