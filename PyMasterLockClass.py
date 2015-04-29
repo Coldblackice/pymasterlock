@@ -69,6 +69,6 @@ class MasterLock():
 		sys.exit('Usage: %s firstnumber secondnumber thirdnumber' % sys.argv[0] + '\n' + "Example: python2 %s 3 6 10" % sys.argv[0])
 
 ml = MasterLock()
-print "[+] First Number : " + str(ml.get_first())
-print "[+] possible Second number : " + str(ml.get_second())
+print "[+] First number : " + str(ml.get_first())
+print "[+] possible Second numbers : " + str(ml.get_second())
 print "[+] Two Possible Third numbers : " + str(ml.get_third()) + " ( increased accuracy coming in future)"
