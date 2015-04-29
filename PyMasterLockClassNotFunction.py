@@ -43,4 +43,4 @@ class MasterLock():
 ml = MasterLock()
 print "[+] First Number : " + str(ml.get_first())
 print "[+] possible Second number : " + str(ml.get_second())
-print "[+] Two Possible Third numbers ( increased accuracy coming : " + str(ml.get_third())
+print "[+] Two Possible Third numbers ( increased accuracy coming ) : " + str(ml.get_third())
